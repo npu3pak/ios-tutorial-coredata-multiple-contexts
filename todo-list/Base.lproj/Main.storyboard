@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="acU-kT-kVY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Record View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RecordViewController" customModule="todo_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2uq-10-QAW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2uq-10-QAW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6Ei-Py-2WI"/>
+                            <constraint firstItem="2uq-10-QAW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="72I-rs-3h0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2uq-10-QAW" secondAttribute="bottom" id="9Zp-Wv-4GY"/>
+                            <constraint firstAttribute="trailing" secondItem="2uq-10-QAW" secondAttribute="trailing" id="Vz0-WA-XeR"/>
+                            <constraint firstAttribute="trailing" secondItem="2uq-10-QAW" secondAttribute="trailing" id="a8d-0U-Rtz"/>
+                            <constraint firstItem="2uq-10-QAW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="d41-GC-dQf"/>
+                            <constraint firstItem="2uq-10-QAW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pQz-Ec-gMT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2uq-10-QAW" secondAttribute="bottom" id="ybq-Cy-0di"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1io-Bd-b7d">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Qag-oW-VY9">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="14N-O8-6qX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="F6B-Rp-gf4">
+                            <connections>
+                                <action selector="save:" destination="BYZ-38-t0r" id="anp-QI-lz7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="2uq-10-QAW" id="F68-jn-Nuo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765.60000000000002" y="123.68815592203899"/>
+        </scene>
+        <!--TODO-->
+        <scene sceneID="yFX-G2-23D">
+            <objects>
+                <tableViewController id="aOL-Xi-YLk" customClass="RecordTableViewController" customModule="todo_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="J9f-1v-Imo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="aOL-Xi-YLk" id="hZo-Kk-bhw"/>
+                            <outlet property="delegate" destination="aOL-Xi-YLk" id="z7g-g4-dEm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TODO" id="jOQ-lm-tE9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7xK-bb-TRl">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="AddRecord" id="qdd-mY-VaX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="EditRecord" id="KWm-P3-9uo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qeI-gf-uUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fNH-m6-u5n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="acU-kT-kVY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y6p-g1-0w2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aOL-Xi-YLk" kind="relationship" relationship="rootViewController" id="Ons-DR-mIy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W64-sa-etn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qdd-mY-VaX"/>
+    </inferredMetricsTieBreakers>
+</document>
